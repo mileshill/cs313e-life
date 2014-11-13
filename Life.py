@@ -63,7 +63,9 @@ class FredkinCell(AbstractCell):
 
     def __repr__(self):
         if self.alive :
-            return str(self.age)
+            if self.age < 10:
+                return str(self.age)
+            return "+"
         return "-"
 
 
@@ -74,7 +76,30 @@ class Life:
 
 
 
+#------
+# demo
+#------
 
+all_events = gather(stdin)
+
+stdout.write("Ordered pairs with type tag\n")
+for event in all_events:
+    stdout.write( str(event) + "\n")
+
+
+n = ConwayCell(1,1)
+stdout.write("Dead Conway --> " + str(n) + '\n')
+n.alive = True
+stdout.write("Alive Conway --> " + str(n) + '\n')
+
+m = FredkinCell(1,1)
+stdout.write("Dead Fredkin --> " + str(m) + '\n' )
+m.alive = True
+stdout.write("Alive Fredkin --> " + str(m) + '\n')
+m.age = 8
+stdout.write("Fredkin: age < 10 : " + str(m) + "\n")
+m.age = 10
+stdout.write("Fredkin: age >= 10 : " + str(m) + '\n')
 
 
 
