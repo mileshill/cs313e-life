@@ -82,7 +82,7 @@ class Life:
 
 all_events = gather(stdin)
 
-stdout.write("Ordered pairs with type tag\n")
+stdout.write("Initial Conditions: ie, all living cells in grid\n")
 for event in all_events:
     stdout.write( str(event) + "\n")
 
