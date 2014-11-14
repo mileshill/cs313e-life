@@ -2,6 +2,7 @@ __author__ = 'El Dueno'
 
 from collections import defaultdict
 from sys import stdin,stdout
+
 def reader(r):
     s = r.readline()
     return s
@@ -124,6 +125,7 @@ class Life:
                 if type(tile) is ConwayCell or type(tile) is FredkinCell and tile.alive:
                     loc[tile.t] += [[tile.x,tile.y]]
 
+
         if "c" in loc:
             for item in loc["c"]:
                 x, y = item
@@ -181,27 +183,67 @@ class Life:
                 except IndexError:
                     pass
 
+    def Evolve(self, steps, print_list):
+        stdout.write(self.__repr__())
+
+        for turn in range(1, steps + 1):
+            self.pop = 0
+            self.gen = turn
+            self.secondary = self.Make_Grid("secondary")
+            self.Tally()
+            for j in range(self.y):
+                for i in range(self.x):
+                    numeric = self.secondary[i][j]
+                    living  = self.primary[i][j]
+
+                    if type(self.primary[i][j]) is str and numeric == 3 :
+                        self.Add_Cell("c", i, j)
+
+                    elif type(self.primary[i][j]) is ConwayCell:
+                        if numeric > 1 or numeric < 4 :
+                            self.primary[i][j].alive = True
+
+
+                        if numeric < 2 or numeric > 3 :
+                            self.primary[i][j] = "."
+
+            current = 0
+            for i in range(self.x):
+                for j in range(self.y):
+                    if type(self.primary[i][j]) is ConwayCell or type(self.primary[i][j]) is FredkinCell:
+                        if self.primary[i][j].alive :
+                            current += 1
+
+            self.pop = current
+
+
+            if turn in print_list:
+                stdout.write(self.__repr__())
+                stdout.write("\n")
+
+
+        stdout.write("\n")
+
 
 
 #------
 # demo
 #------
-
+"""
 all_events = gather(stdin)
 
 single_event = all_events[0]
 
-for sim in all_events:
-    l = Life(sim)
-    for row in l.secondary:
-        print(row)
-    l.Tally()
-    print("after tally")
-    for row in l.secondary:
-        print(row)
+l = Life(single_event)
+l.Evolve(12)
 
 
-"""
+tester = [['c',3,2],['c',3,3],['c',3,4],['dim',6,7]]
+m = Life(tester)
+m.Evolve(5)
+
+
+
 stdout.write("Initial Conditions: ie, all living cells in grid\n")
 for event in all_events:
     stdout.write( str(event) + "\n")
