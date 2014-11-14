@@ -71,8 +71,51 @@ class FredkinCell(AbstractCell):
 
 class Life:
     def __init__(self,initial_state):
-        pass
 
+        dimensions = initial_state[-1]
+        _, x, y = dimensions
+        self.x = x
+        self.y = y
+        self.gen = 0
+        self.pop = len(initial_state[:-1])
+        self.primary = self.Make_Grid("primary")
+        self.secondary = self.Make_Grid("secondary")
+
+        for t,x,y in initial_state[:-1]:
+            self.Add_Cell(t, x, y)
+
+
+
+    def __repr__(self):
+        stdout.write("Generation = " + str(self.gen) + "," + " Population = " + str(self.pop) + "\n")
+        for i in range(self.x):
+            for j in range(self.y):
+                tile = self.primary[i][j]
+                stdout.write(str(tile))
+            stdout.write("\n")
+        return ""
+
+    def Make_Grid(self, priority):
+        grid = [[]] * self.x
+        for i in range(self.x):
+            if priority == "primary":
+                grid[i] = ["."] * self.y
+                continue
+
+            grid[i] = [0] * self.y
+
+        return grid
+
+
+
+    def Add_Cell(self, t, x ,y):
+        if t == "c":
+            cell = ConwayCell(x,y)
+        else:
+            cell = FredkinCell(x,y)
+
+        cell.alive = True
+        self.primary[x][y] = cell
 
 
 
@@ -82,6 +125,12 @@ class Life:
 
 all_events = gather(stdin)
 
+single_event = all_events[0]
+
+for sim in all_events:
+    l = Life(sim)
+    print(l)
+"""
 stdout.write("Initial Conditions: ie, all living cells in grid\n")
 for event in all_events:
     stdout.write( str(event) + "\n")
@@ -100,6 +149,8 @@ m.age = 8
 stdout.write("Fredkin: age < 10 : " + str(m) + "\n")
 m.age = 10
 stdout.write("Fredkin: age >= 10 : " + str(m) + '\n')
+"""
+
 
 
 
