@@ -1,6 +1,6 @@
 __author__ = 'El Dueno'
 
-
+from collections import defaultdict
 from sys import stdin,stdout
 def reader(r):
     s = r.readline()
@@ -116,6 +116,71 @@ class Life:
         cell.alive = True
         self.primary[x][y] = cell
 
+    def Tally(self):
+        loc = defaultdict(list)
+        for i in range(self.x):
+            for j in range(self.y):
+                tile = self.primary[i][j]
+                if type(tile) is ConwayCell or type(tile) is FredkinCell and tile.alive:
+                    loc[tile.t] += [[tile.x,tile.y]]
+
+        if "c" in loc:
+            for item in loc["c"]:
+                x, y = item
+                try:
+                    self.secondary[x][y + 1] += 1 # north
+                except IndexError:
+                    pass
+                try:
+                    self.secondary[x + 1][y + 1] += 1 # north east
+                except IndexError:
+                    pass
+                try:
+                    self.secondary[x + 1][y] += 1 # east
+                except IndexError:
+                    pass
+                try:
+                    self.secondary[x + 1][y - 1] += 1 # south east
+                except IndexError:
+                    pass
+                try:
+                    self.secondary[x][y - 1] += 1 # south
+                except IndexError:
+                    pass
+                try:
+                    self.secondary[x - 1][y - 1] += 1 # south west
+                except IndexError:
+                    pass
+                try:
+                    self.secondary[x - 1][y] += 1 # west
+                except IndexError:
+                    pass
+                try:
+                    self.secondary[x - 1][y + 1] += 1 # north west
+                except IndexError:
+                    pass
+
+
+        if "f" in loc:
+            for item in loc["f"]:
+                x, y = item
+                try:
+                    self.secondary[x][y + 1] += 1 # north
+                except IndexError:
+                    pass
+                try:
+                    self.secondary[x + 1][y] += 1 # east
+                except IndexError:
+                    pass
+                try:
+                    self.secondary[x][y - 1] += 1 # south
+                except IndexError:
+                    pass
+                try:
+                    self.secondary[x - 1][y] += 1 # west
+                except IndexError:
+                    pass
+
 
 
 #------
@@ -128,7 +193,14 @@ single_event = all_events[0]
 
 for sim in all_events:
     l = Life(sim)
-    print(l)
+    for row in l.secondary:
+        print(row)
+    l.Tally()
+    print("after tally")
+    for row in l.secondary:
+        print(row)
+
+
 """
 stdout.write("Initial Conditions: ie, all living cells in grid\n")
 for event in all_events:
