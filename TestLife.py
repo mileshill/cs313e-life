@@ -160,4 +160,32 @@ class TestLife(TestCase):
         self.assertEqual(j.primary[0][1].__repr__(),"0")
         self.assertTrue(j.primary[0][1].alive)
 
+    #Tally()
+    def test_life_4(self):
+        initial = [['c',1,1],['dim',3,3]]
+        j = Life(initial)
+
+        for row in j.secondary:
+            for cell in row:
+                self.assertEqual(cell,0)
+
+        j.Tally()
+        self.assertEqual(j.secondary[0],[1,1,1])
+        self.assertEqual(j.secondary[1],[1,0,1])
+        self.assertEqual(j.secondary[2],[1,1,1])
+
+    #Tally()
+    def test_life_5(self):
+        initial = [['f',1,1],['dim',3,3]]
+        j = Life(initial)
+
+        for row in j.secondary:
+            for cell in row:
+                self.assertEqual(cell,0)
+
+        j.Tally()
+        self.assertEqual(j.secondary[0],[0,1,0])
+        self.assertEqual(j.secondary[1],[1,0,1])
+        self.assertEqual(j.secondary[2],[0,1,0])
+
 main()
