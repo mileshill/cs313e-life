@@ -130,4 +130,34 @@ class TestLife(TestCase):
             _, x, y = item
             self.assertIsInstance(j.primary[x][y], ConwayCell)
 
+    #Make_Grid()
+    def test_life_2(self):
+        initial = [['c', 8, 4], ['c', 8, 5], ['c', 8, 6], ['c', 8, 7], ['c', 8, 8], ['c', 9, 7], ['c', 10, 6], ['c', 11, 5], ['c', 12, 4], ['c', 12, 5], ['c', 12, 6], ['c', 12, 7], ['c', 12, 8], ['dim', 21, 13]]
+        j = Life(initial)
+        self.assertEqual(21,len(j.primary))
+        self.assertEqual(13, len(j.primary[0]))
+        self.assertEqual(21,len(j.secondary))
+        self.assertEqual(13, len(j.secondary[0]))
+
+        for cell in j.primary[0]:
+            self.assertIsInstance(cell,str)
+            self.assertEqual(cell,".")
+
+    #Add cell
+    def test_life_3(self):
+        initial = [['c', 8, 4], ['c', 8, 5], ['c', 8, 6], ['c', 8, 7], ['c', 8, 8], ['c', 9, 7], ['c', 10, 6], ['c', 11, 5], ['c', 12, 4], ['c', 12, 5], ['c', 12, 6], ['c', 12, 7], ['c', 12, 8], ['dim', 21, 13]]
+        j = Life(initial)
+        self.assertEqual(j.primary[0][0],".")
+        self.assertEqual(j.primary[0][1],".")
+        j.Add_Cell("c",0,0)
+        j.Add_Cell("f",0,1)
+
+        self.assertIsInstance(j.primary[0][0], ConwayCell)
+        self.assertEqual(j.primary[0][0].__repr__(), "*")
+        self.assertTrue(j.primary[0][0].alive)
+
+        self.assertIsInstance(j.primary[0][1], FredkinCell)
+        self.assertEqual(j.primary[0][1].__repr__(),"0")
+        self.assertTrue(j.primary[0][1].alive)
+
 main()
