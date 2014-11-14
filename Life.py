@@ -72,16 +72,15 @@ class FredkinCell(AbstractCell):
 class Life:
     def __init__(self,initial_state):
 
-        dimensions = initial_state[-1]
-        _, x, y = dimensions
+        _, x, y = initial_state.pop()
         self.x = x
         self.y = y
         self.gen = 0
-        self.pop = len(initial_state[:-1])
+        self.pop = len(initial_state)
         self.primary = self.Make_Grid("primary")
         self.secondary = self.Make_Grid("secondary")
 
-        for t,x,y in initial_state[:-1]:
+        for t,x,y in initial_state:
             self.Add_Cell(t, x, y)
 
 
