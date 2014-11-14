@@ -207,6 +207,7 @@ class Life:
                         if numeric < 2 or numeric > 3 :
                             self.primary[i][j] = "."
 
+
             current = 0
             for i in range(self.x):
                 for j in range(self.y):
