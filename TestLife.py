@@ -189,6 +189,13 @@ class TestLife(TestCase):
         self.assertEqual(j.secondary[1],[1,0,1])
         self.assertEqual(j.secondary[2],[0,1,0])
 
+    def test_life_6(self):
+        initial = [['f',1,1],['dim',3,3]]
+        j = Life(initial,".")
+        k = j.__repr__()
+        self.assertEqual(k,"")
+
+
     #Life.Evolve()
 
 main()
