@@ -207,11 +207,23 @@ class TestLife(TestCase):
         self.assertRaises(IndexError, j.Tally())
 
     def test_life_9(self):
-        initial = [['f',0,1],['f',1,0],['f',2,1],['f',1,2],['dim', 3, 3]]
+        initial = [['f',0,1],['f',1,2],['f',2,1],['f',1,0],['dim', 3, 3]]
         j = Life(initial, "-")
         self.assertRaises(IndexError, j.Tally())
 
 
+    def test_life_10(self):
+        initial = [['c',2,1],['c',2,2],['c',2,3],['dim',5,5]]
+        j = Life(initial,".")
+        j.Evolve(1,[1])
+        self.assertEqual(j.secondary[1][2],3)
+        self.assertIsInstance(j.primary[1][2], ConwayCell)
+
+        self.assertEqual(j.secondary[3][2],3)
+        self.assertIsInstance(j.primary[3][2], ConwayCell)
+
+        self.assertIsInstance(j.primary[2][1], str)
+        self.assertIsInstance(j.primary[2][3], str)
 
 
     #Life.Evolve()
