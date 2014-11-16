@@ -114,6 +114,7 @@ class TestLife(TestCase):
         self.assertEqual("+", j.__repr__())
 
 
+
     #-----------------
     # Life
     #----------------
@@ -187,5 +188,7 @@ class TestLife(TestCase):
         self.assertEqual(j.secondary[0],[0,1,0])
         self.assertEqual(j.secondary[1],[1,0,1])
         self.assertEqual(j.secondary[2],[0,1,0])
+
+    #Life.Evolve()
 
 main()
