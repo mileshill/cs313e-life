@@ -199,7 +199,7 @@ class TestLife(TestCase):
         initial = [['f',1,1],['dim',3,3]]
         j = Life(initial,".")
         k = j.Tally()
-        self.assertEqual(k,"")
+        self.assertEqual(k,None)
 
     def test_life_8(self):
         initial = [['c',0,0],['dim',3,3]]
