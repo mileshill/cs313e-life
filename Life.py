@@ -7,10 +7,8 @@ def reader(r):
     s = r.readline()
     return s
 
-
-
 def gather(r):
-    """ Returns a list of ordered pairs with conway/fredkin indicator. List of pairs represents a gameboard """
+    """ Return an array of initial conditions based on read-file. Each row is an initial condition """
     event = list()
     while True:
         try:
@@ -71,6 +69,7 @@ class FredkinCell(AbstractCell):
 
 
 class Life:
+    """ Main Class for execution of gameboard """
     def __init__(self,initial_state, default):
         _, x, y = initial_state.pop()
         self.x = x
@@ -94,6 +93,7 @@ class Life:
         return ""
 
     def Make_Grid(self, priority, default):
+        """ Creates a gameboard with dimensions of self.x, self.y """
         grid = [[]] * self.x
         for i in range(self.x):
             if priority == "primary":
@@ -103,6 +103,7 @@ class Life:
         return grid
 
     def Add_Cell(self, t, x ,y):
+        """ Add cell to gameboard """
         if t == "c":
             cell = ConwayCell(x,y)
         else:
@@ -112,6 +113,7 @@ class Life:
         self.primary[x][y] = cell
 
     def Tally(self):
+        """ Increments scoreboard according to cell types """
         loc = defaultdict(list)
         for i in range(self.x):
             for j in range(self.y):
@@ -174,9 +176,10 @@ class Life:
                     self.secondary[x - 1][y] += 1 # west
                 except IndexError:
                     pass
-        return ""
+
 
     def Evolve(self, steps, print_list):
+        """ Progressing game in single generation steps. Only prints steps in print_list """
         stdout.write(self.__repr__())
         for turn in range(1, steps + 1):
             self.pop = 0
