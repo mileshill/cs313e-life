@@ -174,6 +174,7 @@ class Life:
                     self.secondary[x - 1][y] += 1 # west
                 except IndexError:
                     pass
+        return ""
 
     def Evolve(self, steps, print_list):
         stdout.write(self.__repr__())

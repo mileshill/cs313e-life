@@ -195,6 +195,11 @@ class TestLife(TestCase):
         k = j.__repr__()
         self.assertEqual(k,"")
 
+    def test_life_7(self):
+        initial = [['f',1,1],['dim',3,3]]
+        j = Life(initial,".")
+        k = j.Tally()
+        self.assertEqual(k,"")
 
     #Life.Evolve()
 
