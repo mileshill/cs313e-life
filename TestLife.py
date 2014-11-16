@@ -202,9 +202,12 @@ class TestLife(TestCase):
         self.assertEqual(k,None)
 
     def test_life_8(self):
-        initial = [['c',0,0],['dim',3,3]]
+        initial = [['c',0,0],["c",0,1],['c',0,2],['c',2,0],['c',2,1],['c',2,2],['dim',3,3]]
         j = Life(initial,".")
         self.assertRaises(IndexError, j.Tally())
+
+
+
 
     #Life.Evolve()
 
