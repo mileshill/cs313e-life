@@ -226,6 +226,18 @@ class TestLife(TestCase):
         self.assertIsInstance(j.primary[2][3], str)
 
 
+    def test_life_11(self):
+        initial = [['f',2,1],['f',2,2],['f',2,3],['dim',5,5]]
+        j = Life(initial,"-")
+        j.Evolve(1,[1])
+        self.assertEqual(j.secondary[1][2],1)
+        self.assertIsInstance(j.primary[1][2], FredkinCell)
+
+        self.assertIsInstance(j.primary[2][2], str)
+        self.assertEqual(j.primary[2][1].age, 1)
+        j.Evolve(2,[1,2])
+
+        self.assertIsInstance(j.primary[2][1], ConwayCell)
     #Life.Evolve()
 
 main()
