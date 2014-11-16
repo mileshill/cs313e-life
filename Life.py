@@ -126,8 +126,9 @@ class Life:
                 x, y = item
                 try:
                     self.secondary[x][y + 1] += 1 # north
-                    assert IndexError
+
                 except IndexError:
+                    assert IndexError
                     pass
                 try:
                     self.secondary[x + 1][y + 1] += 1 # north east
