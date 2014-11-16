@@ -120,7 +120,7 @@ class TestLife(TestCase):
     #----------------
     def test_Life(self):
         initial = [['c', 8, 4], ['c', 8, 5], ['c', 8, 6], ['c', 8, 7], ['c', 8, 8], ['c', 9, 7], ['c', 10, 6], ['c', 11, 5], ['c', 12, 4], ['c', 12, 5], ['c', 12, 6], ['c', 12, 7], ['c', 12, 8], ['dim', 21, 13]]
-        j = Life(initial)
+        j = Life(initial,".")
         self.assertEqual(j.x, 21)
         self.assertEqual(j.y, 13)
         self.assertEqual(j.gen, 0)
@@ -134,7 +134,7 @@ class TestLife(TestCase):
     #Make_Grid()
     def test_life_2(self):
         initial = [['c', 8, 4], ['c', 8, 5], ['c', 8, 6], ['c', 8, 7], ['c', 8, 8], ['c', 9, 7], ['c', 10, 6], ['c', 11, 5], ['c', 12, 4], ['c', 12, 5], ['c', 12, 6], ['c', 12, 7], ['c', 12, 8], ['dim', 21, 13]]
-        j = Life(initial)
+        j = Life(initial,".")
         self.assertEqual(21,len(j.primary))
         self.assertEqual(13, len(j.primary[0]))
         self.assertEqual(21,len(j.secondary))
@@ -147,7 +147,7 @@ class TestLife(TestCase):
     #Add cell
     def test_life_3(self):
         initial = [['c', 8, 4], ['c', 8, 5], ['c', 8, 6], ['c', 8, 7], ['c', 8, 8], ['c', 9, 7], ['c', 10, 6], ['c', 11, 5], ['c', 12, 4], ['c', 12, 5], ['c', 12, 6], ['c', 12, 7], ['c', 12, 8], ['dim', 21, 13]]
-        j = Life(initial)
+        j = Life(initial,".")
         self.assertEqual(j.primary[0][0],".")
         self.assertEqual(j.primary[0][1],".")
         j.Add_Cell("c",0,0)
@@ -164,7 +164,7 @@ class TestLife(TestCase):
     #Tally()
     def test_life_4(self):
         initial = [['c',1,1],['dim',3,3]]
-        j = Life(initial)
+        j = Life(initial,".")
 
         for row in j.secondary:
             for cell in row:
@@ -178,7 +178,7 @@ class TestLife(TestCase):
     #Tally()
     def test_life_5(self):
         initial = [['f',1,1],['dim',3,3]]
-        j = Life(initial)
+        j = Life(initial,".")
 
         for row in j.secondary:
             for cell in row:

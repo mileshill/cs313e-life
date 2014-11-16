@@ -87,7 +87,6 @@ class Life:
     def __repr__(self):
         stdout.write("Generation = " + str(self.gen) + "," + " Population = " + str(self.pop) + "\n")
         for i in range(self.x):
-            assert type(i) is int
             for j in range(self.y):
                 tile = self.primary[i][j]
                 stdout.write(str(tile))
