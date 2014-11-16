@@ -122,7 +122,7 @@ class Life:
                     loc[tile.t] += [[tile.x,tile.y]]
 
         if "c" in loc:
-            for item in loc["c"]:
+            for item in loc['c']:
                 x, y = item
                 try:
                     self.secondary[x][y + 1] += 1 # north

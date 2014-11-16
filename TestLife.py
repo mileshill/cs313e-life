@@ -206,6 +206,11 @@ class TestLife(TestCase):
         j = Life(initial,".")
         self.assertRaises(IndexError, j.Tally())
 
+    def test_life_9(self):
+        initial = [['f',0,1],['f',2,1],['f',1,0],['f',1,2],['dim', 3, 3]]
+        j = Life(initial, "-")
+        self.assertRaises(IndexError, j.Tally())
+
 
 
 
