@@ -193,7 +193,7 @@ class Life:
 
 
                     # Conway cells and "." strings
-                    if type(self.primary[i][j]) is str and numeric == 3 : # dead -> alive
+                    if self.primary[i][j]=="." and numeric == 3 : # dead -> alive
                         self.Add_Cell("c", i, j)
                         continue
 
