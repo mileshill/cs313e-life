@@ -21,7 +21,7 @@ def gather(r):
         for row_num in range(row + 1): # collects blank at end
             line =  reader(r).strip()
             conway_condition = "*" in list(line)
-            fredkin_condition = set("0123456789+-").intersection(set(line))
+            fredkin_condition = set("0123456789+").intersection(set(line))
 
 
             if conway_condition or fredkin_condition :
