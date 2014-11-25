@@ -1,0 +1,230 @@
+commit 641c28add63cda724fd37461fb9c20231d5e0e6d
+Author: Miles Hill <miles1618@gmail.com>
+Date:   Tue Nov 18 15:17:58 2014 -0600
+
+    Update Life.py
+
+commit ac358e3a6ee2f2c0d5411f85aa01ff82f82b6116
+Author: Miles Hill <miles1618@gmail.com>
+Date:   Mon Nov 17 09:47:41 2014 -0600
+
+    Update Life.py
+
+commit 866ea0da4f0b75abfcfdf1af4606c4c3ee65acd3
+Author: Miles Hill <miles1618@gmail.com>
+Date:   Mon Nov 17 09:44:04 2014 -0600
+
+    Update RunLife.py
+
+commit 2355dd6c6b1033de065718df44d168467327817c
+Author: Miles Hill <miles1618@gmail.com>
+Date:   Sat Nov 15 23:25:47 2014 -0600
+
+    Coverage
+
+commit cf1f279d0b15700568a1be11000092cbd499ed94
+Merge: 2b40779 67c8144
+Author: Miles Hill <miles1618@gmail.com>
+Date:   Sat Nov 15 23:22:48 2014 -0600
+
+    Merge remote-tracking branch 'origin/master'
+
+commit 2b40779fdd09a443369a3eddd8f2e9d0597bab2c
+Author: Miles Hill <miles1618@gmail.com>
+Date:   Sat Nov 15 23:22:39 2014 -0600
+
+    EID
+
+commit 67c814464b75a7faf1b67b7585c317ad2e5e42da
+Author: Miles Hill <miles1618@gmail.com>
+Date:   Sat Nov 15 23:17:24 2014 -0600
+
+    Coverage
+
+commit d9f2fa97d4662414cd3a77e8f027297755754d39
+Author: Miles Hill <miles1618@gmail.com>
+Date:   Sat Nov 15 23:16:06 2014 -0600
+
+    Testing
+
+commit 6badd41de92512d1303ee294eea820a81f683f48
+Author: Miles Hill <miles1618@gmail.com>
+Date:   Sat Nov 15 23:09:19 2014 -0600
+
+    Testing
+
+commit 897716a17f1c37e013e103f68169d54ddd2903f8
+Author: Miles Hill <miles1618@gmail.com>
+Date:   Sat Nov 15 22:51:30 2014 -0600
+
+    Testing
+
+commit 28ca8c7cdeb3b9af5b37782ff8f5dbda133a4b0b
+Author: Miles Hill <miles1618@gmail.com>
+Date:   Sat Nov 15 22:49:04 2014 -0600
+
+    Testing
+
+commit b602e44862d4a25cea242b0da1147ae9d6288080
+Author: Miles Hill <miles1618@gmail.com>
+Date:   Sat Nov 15 22:41:12 2014 -0600
+
+    Testing
+
+commit 8784d5b898d0bdffd1794908ce280ae7db73f3ec
+Author: Miles Hill <miles1618@gmail.com>
+Date:   Sat Nov 15 22:38:06 2014 -0600
+
+    Testing
+
+commit d7db46a35474bc86d3e9be9218fe45673e2e6bd9
+Merge: 0c16be3 483d2fe
+Author: Miles Hill <miles1618@gmail.com>
+Date:   Sat Nov 15 22:37:10 2014 -0600
+
+    Merge remote-tracking branch 'origin/master'
+
+commit 0c16be33a19fb5d11fb2d5818bdf93257bf967b2
+Author: Miles Hill <miles1618@gmail.com>
+Date:   Sat Nov 15 22:37:01 2014 -0600
+
+    Testing
+
+commit 483d2fe76145aa3f5cadbdbc921ec58aa6236e6d
+Author: Miles Hill <miles1618@gmail.com>
+Date:   Sat Nov 15 22:35:01 2014 -0600
+
+    Docs
+
+commit a2713f6d1ff8f3b4203264b49541c7b39a2f44e6
+Author: Miles Hill <miles1618@gmail.com>
+Date:   Sat Nov 15 22:34:11 2014 -0600
+
+    Testing
+
+commit 48789ea752eca394be4dbdff2fafae271fde27d1
+Author: Miles Hill <miles1618@gmail.com>
+Date:   Sat Nov 15 22:32:32 2014 -0600
+
+    Testing
+
+commit 6235c063f8e50a37470a3fd23325c58a486523d9
+Author: Miles Hill <miles1618@gmail.com>
+Date:   Sat Nov 15 22:22:37 2014 -0600
+
+    Testing
+
+commit 22e2848a29838749e2e4294db6af4c84540b9cfe
+Author: Miles Hill <miles1618@gmail.com>
+Date:   Sat Nov 15 22:20:22 2014 -0600
+
+    Testing
+
+commit a339d0f6158fb944b547a4bd5de3f18deaa9a3a3
+Author: Miles Hill <miles1618@gmail.com>
+Date:   Sat Nov 15 22:17:10 2014 -0600
+
+    Testing
+
+commit b246010e27cf7d0d7d593adec8a9715b29b2603c
+Author: Miles Hill <miles1618@gmail.com>
+Date:   Sat Nov 15 22:14:09 2014 -0600
+
+    Testing
+
+commit 5afe086fa3507231b148ba1b489be554ca2ede87
+Merge: bf1c9f7 6c0644d
+Author: Miles Hill <miles1618@gmail.com>
+Date:   Sat Nov 15 22:00:26 2014 -0600
+
+    Merge remote-tracking branch 'origin/master'
+
+commit bf1c9f797836274d47b6e27c384ef773c3faf83d
+Author: Miles Hill <miles1618@gmail.com>
+Date:   Sat Nov 15 22:00:05 2014 -0600
+
+    Fredkin -> Conway
+
+commit 6c0644d5cf4b496f708a622df7879e54d2b67470
+Author: Miles Hill <miles1618@gmail.com>
+Date:   Fri Nov 14 12:17:20 2014 -0600
+
+    TestLife.out
+
+commit d0c4ae71ea7f7e4fd9f047a269ce93b5a73400e6
+Author: Miles Hill <miles1618@gmail.com>
+Date:   Fri Nov 14 05:23:28 2014 -0600
+
+    Testcases upto Life.Evolve()
+
+commit a07f3f99711da83b0deb5fb11d5a5a25b356bfb0
+Author: Miles Hill <miles1618@gmail.com>
+Date:   Fri Nov 14 05:11:57 2014 -0600
+
+    Test cases upto Life.Tally()
+
+commit c49a2e5cd7c04686d2757a0950af54dfd12a3391
+Author: Miles Hill <miles1618@gmail.com>
+Date:   Fri Nov 14 04:52:52 2014 -0600
+
+    Test cases for functions, and three cell classes
+
+commit 4daec971d61a3643037939c167c6d0d6e5190af0
+Author: Miles Hill <miles1618@gmail.com>
+Date:   Fri Nov 14 04:18:51 2014 -0600
+
+    Update
+
+commit 5120b8c157326e6b64daf79c916291c171b89c32
+Author: Miles Hill <miles1618@gmail.com>
+Date:   Fri Nov 14 04:12:14 2014 -0600
+
+    Correct output for conway cells
+
+commit 950f6e14ea5d09408db135c42ced55ee4df434b6
+Author: Miles Hill <miles1618@gmail.com>
+Date:   Fri Nov 14 02:58:45 2014 -0600
+
+    Life.Tally() increments numeric counter grid for either cell type
+
+commit 369fb267c316fbad765388639ba994bf19b7da31
+Author: Miles Hill <miles1618@gmail.com>
+Date:   Fri Nov 14 02:24:48 2014 -0600
+
+    Updated Life.__init__()
+
+commit 3a44d77fa95e825dd4d9c8b4835b4dd4b2e4fab8
+Author: Miles Hill <miles1618@gmail.com>
+Date:   Fri Nov 14 02:21:47 2014 -0600
+
+    Correct output of initial conditions
+
+commit 0b23dd07aa9cf29261bb519ae9ed5cdf7d10ec0a
+Author: Miles Hill <miles1618@gmail.com>
+Date:   Thu Nov 13 11:26:21 2014 -0600
+
+    Updates
+
+commit 6838b2a0bea204332948ff3620df62195a48a065
+Author: Miles Hill <miles1618@gmail.com>
+Date:   Thu Nov 13 11:25:25 2014 -0600
+
+    Updates
+
+commit 6e8da8091bd00170994a6cd14bc6d12ceeabf8f6
+Author: Miles Hill <miles1618@gmail.com>
+Date:   Thu Nov 13 11:15:10 2014 -0600
+
+    New files
+
+commit 8abc2ee1e6f49bac71562f9d100fd4a63df90ae7
+Author: Miles Hill <miles1618@gmail.com>
+Date:   Thu Nov 13 11:14:27 2014 -0600
+
+    Initial push
+
+commit 4052fa54bd4dc4bc01be73cb87003649833a6cdd
+Author: Miles Hill <miles1618@gmail.com>
+Date:   Thu Nov 13 11:11:24 2014 -0600
+
+    Initial commit
